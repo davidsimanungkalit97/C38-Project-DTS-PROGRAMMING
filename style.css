@@ -41,6 +41,61 @@ a {
 		transform: rotate(360deg);
 	}
 }
+
+/* SIDE BAR */
+.mobile-menu {
+	float: right;
+	display: none;
+	padding: 0px 10px;
+	margin: -35px 10px;
+}
+
+.mobile-menu:hover {
+	cursor: pointer;
+}
+#check {
+	display: none;
+}
+.sidebar {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: -300px;
+	width: 200px;
+	background-color: rgba(16, 47, 80, 0.7);
+	transition: 0.3s;
+}
+
+.sidebar ul li a {
+	color: #fff;
+
+}
+
+.sidebar ul li {
+	padding: 10px 30px;
+	transition-property: background-color;
+
+}
+#check:checked ~ .sidebar {
+	left: 0;
+}
+
+@media (max-width: 670px) {
+	.mobile-menu {
+		display: block;
+	}
+	header ul {
+		display: none;
+	}
+}
+@media screen and (max-width: 670px) {
+	.main {
+		width: 80%;
+	}
+}
+
+
+
 /* Bagian ini untuk mengatur sisi ATAS Header */
 
 
@@ -51,7 +106,7 @@ a {
 .medsos ul li {
 	display: inline-block;
 	color: #fff;
-	margin: 10px;
+	margin: 10px 10px;
 }
 .container {
 	width: 80%;
@@ -97,7 +152,7 @@ header ul li a:hover {
 /* Banner */
 .banner {
 	height: 70vh;
-	background-image: url('banner.jpg');
+	background-image: url('../img/banner.jpg');
 	background-size: cover;
 	position: relative;
 	display: flex;
